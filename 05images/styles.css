@@ -202,10 +202,12 @@ main address {
     background-color: #BE936A;
     border: 1px solid #A34E2E;
     border-radius: 8px;
-    padding: .5rem;
-    width: 220px;
+    padding: 0.75rem 1rem;
+    display: inline-block;
+    min-width: 260px;
     font-style: normal;
     color: #564B4B;
+    line-height: 1.6;
 }
 
 /* Footer */
