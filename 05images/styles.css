@@ -110,13 +110,24 @@ main a:hover {
     color: #B66B40;
 }
 
-/* Wrapped image for home page */
-img.wrapped {
-    float: right;
-    width: 45%;
-    margin: 0 0 1rem 1rem;
+/* Home page image with caption */
+figure.home-image {
+    text-align: center;
+    margin: 1.5rem auto;
+}
+
+figure.home-image img {
+    width: 70%;
+    height: auto;
     border-radius: 10px;
     border: 2px solid #BE936A;
+}
+
+figure.home-image figcaption {
+    color: #564B4B;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    font-style: italic;
 }
 
 /* Gallery layout */
