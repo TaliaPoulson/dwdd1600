@@ -110,7 +110,7 @@ main a:hover {
     color: #B66B40;
 }
 
-/* Home page image with caption */
+/* Home page image (top-centered version, no longer used in layout) */
 figure.home-image {
     text-align: center;
     margin: 1.5rem auto;
@@ -131,6 +131,39 @@ figure.home-image figcaption {
     margin-top: 0.5rem;
     font-style: italic;
     text-align: center;
+}
+
+/* Two-column layout for Price and Image */
+.stick-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.price-section {
+    flex: 1 1 55%;
+}
+
+figure.home-image.side {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+figure.home-image.side img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #BE936A;
+}
+
+figure.home-image.side figcaption {
+    font-style: italic;
+    color: #564B4B;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
 }
 
 /* Gallery layout */
