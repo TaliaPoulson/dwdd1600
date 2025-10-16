@@ -110,6 +110,15 @@ main a:hover {
     color: #B66B40;
 }
 
+/* Wrapped image for home page */
+img.wrapped {
+    float: right;
+    width: 45%;
+    margin: 0 0 1rem 1rem;
+    border-radius: 10px;
+    border: 2px solid #BE936A;
+}
+
 /* Gallery layout */
 .gallery {
     display: flex;
