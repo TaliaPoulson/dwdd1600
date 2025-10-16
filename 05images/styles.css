@@ -121,6 +121,8 @@ figure.home-image img {
     height: auto;
     border-radius: 10px;
     border: 2px solid #BE936A;
+    display: block;
+    margin: 0 auto;
 }
 
 figure.home-image figcaption {
@@ -128,6 +130,7 @@ figure.home-image figcaption {
     font-size: 0.95rem;
     margin-top: 0.5rem;
     font-style: italic;
+    text-align: center;
 }
 
 /* Gallery layout */
