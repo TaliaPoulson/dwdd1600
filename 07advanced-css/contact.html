@@ -11,21 +11,25 @@
   <!-- Load Poppins font and stylesheet -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="hcfavicon.ico">
 </head>
 
 <body>
   <!-- Header -->
   <header>
-    <span>HitCraft</span>
-    <p>All sticks, all styles, one store</p>
+    <img src="images/hitcraftlogo.webp" alt="logo for hitcraft" width="54" height="50">
+    <div class="header-text">
+      <span>HitCraft</span>
+      <p>All sticks, all styles, one store</p>
+    </div>
   </header>
 
   <!-- Navigation -->
   <nav>
     <ul>
-      <li><a href="index.html">Stick Store</a></li>
-      <li><a href="type.html">Which Stick Type is Best For You?</a></li>
-      <li><a href="gallery.html">Drumstick Gallery</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="type.html">Style Info</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
       <li class="active"><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
@@ -35,70 +39,67 @@
     <h1>Contact HitCraft</h1>
     <p>Have a question or need a recommendation? Fill out this form and we’ll help you find your perfect pair of sticks.</p>
 
-      <form action="thanks.html" method="get">
-  <!-- Personal Info -->
-  <fieldset>
-    <legend>Your Information</legend>
+    <form action="thanks.html" method="get">
+      <!-- Personal Info -->
+      <fieldset>
+        <legend>Your Information</legend>
 
-    <label>Full Name*
-      <input type="text" name="fullname" required>
-    </label>
+        <label for="fullname">Full Name*</label>
+        <input type="text" id="fullname" name="fullname" required>
 
-    <label>Email*
-      <input type="email" name="email" required>
-    </label>
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required>
 
-    <label>Phone*
-      <input type="tel" name="phone" required>
-    </label>
-  </fieldset>
+        <label for="phone">Phone*</label>
+        <input type="tel" id="phone" name="phone" required>
+      </fieldset>
 
-  <!-- Experience and Styles -->
-  <fieldset>
-    <legend>Your Playing Info</legend>
+      <!-- Experience and Styles -->
+      <fieldset>
+        <legend>Your Playing Info</legend>
 
-    <p>Experience Level</p>
-    <label><input type="radio" name="level" value="beginner" required> Beginner</label>
-    <label><input type="radio" name="level" value="intermediate"> Intermediate</label>
-    <label><input type="radio" name="level" value="advanced"> Advanced</label>
+        <p>Experience Level</p>
+        <label><input type="radio" name="level" value="beginner" required> Beginner</label>
+        <label><input type="radio" name="level" value="intermediate"> Intermediate</label>
+        <label><input type="radio" name="level" value="advanced"> Advanced</label>
 
-    <p>Playing Styles</p>
-    <label><input type="checkbox" name="style" value="rock"> Rock</label>
-    <label><input type="checkbox" name="style" value="jazz"> Jazz</label>
-    <label><input type="checkbox" name="style" value="funk"> Funk</label>
-    <label><input type="checkbox" name="style" value="metal"> Metal</label>
-    <label><input type="checkbox" name="style" value="marching"> Marching</label>
-  </fieldset>
+        <p>Playing Styles</p>
+        <label><input type="checkbox" name="style" value="rock"> Rock</label>
+        <label><input type="checkbox" name="style" value="jazz"> Jazz</label>
+        <label><input type="checkbox" name="style" value="funk"> Funk</label>
+        <label><input type="checkbox" name="style" value="metal"> Metal</label>
+        <label><input type="checkbox" name="style" value="marching"> Marching</label>
+      </fieldset>
 
-  <!-- Stick Preferences -->
-  <fieldset>
-    <legend>Stick Preferences</legend>
+      <!-- Stick Preferences -->
+      <fieldset>
+        <legend>Stick Preferences</legend>
 
-    <label>Preferred Stick Type
-      <select name="stick-type" required>
-        <option value="">Select one</option>
-        <option value="5A">5A</option>
-        <option value="5B">5B</option>
-        <option value="7A">7A</option>
-        <option value="2B">2B</option>
-        <option value="brushes">Brushes</option>
-        <option value="rods">Rods</option>
-        <option value="mallets">Mallets</option>
-      </select>
-    </label>
+        <label for="stick-type">Preferred Stick Type</label>
+        <select id="stick-type" name="stick-type" required>
+          <option value="">Select one</option>
+          <option value="5A">5A</option>
+          <option value="5B">5B</option>
+          <option value="7A">7A</option>
+          <option value="2B">2B</option>
+          <option value="brushes">Brushes</option>
+          <option value="rods">Rods</option>
+          <option value="mallets">Mallets</option>
+        </select>
 
-    <label>Notes or Questions
-      <textarea name="notes" rows="5" placeholder="Tell us about your feel, size, or brand preferences"></textarea>
-    </label>
-  </fieldset>
+        <label for="notes">Notes or Questions</label>
+        <textarea id="notes" name="notes" rows="5" placeholder="Tell us about your feel, size, or brand preferences"></textarea>
+      </fieldset>
 
-  <button type="submit">Send Message</button>
-</form>
+      <button type="submit">Send Message</button>
+    </form>
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 • Talia Poulson • Web Essentials</p>
+    <p>&copy; 2025 • Talia Poulson • Web Essentials •
+      <a href="mailto:taliapoulson@example.com">Email Us</a>
+    </p>
   </footer>
 </body>
 </html>
