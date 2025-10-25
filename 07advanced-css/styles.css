@@ -47,30 +47,31 @@ header img {
     }
 
     nav ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: block;
         list-style: none;
         margin: 0;
         padding: 0;
         width: 100%;
     }
 
+    nav li {
+        border-bottom: 1px solid #BE936A;
+    }
+
+    nav li:last-child {
+        border-bottom: none;
+    }
+
     nav a {
         display: block;
+        width: 100%;
         text-align: center;
-        padding: 0.8rem 1rem;
+        padding: 1rem;
         color: #EFE7DA;
         text-decoration: none;
         font-weight: 700;
         text-transform: uppercase;
-        width: auto;
         background-color: #A34E2E;
-        border-right: 1px solid #BE936A;
-    }
-
-    nav a:last-child {
-        border-right: none;
     }
 
     nav li.active a {
