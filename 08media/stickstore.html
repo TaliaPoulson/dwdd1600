@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Talia Poulson">
+  <meta name="description" content="Purchase drumsticks and accessories from HitCraft Stick Store">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HitCraft: Stick Store</title>
+
+  <!-- Load Poppins font and stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="layout.css">
+<link rel="stylesheet" href="forms.css">
+<link rel="stylesheet" href="price.css">
+<link rel="stylesheet" href="hero.css">
+<link rel="stylesheet" href="store.css">
+<link rel="stylesheet" href="footer.css">
+  <link rel="icon" type="image/x-icon" href="hcfavicon.ico">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <img src="images/hitcraftlogo.webp" alt="logo for hitcraft" width="54" height="50">
+    <div class="header-text">
+      <span>HitCraft</span>
+      <p>All sticks, all styles, one store</p>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="type.html">Style Info</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="priceguide.html">Price Guide</a></li>
+      <li class="active"><a href="stickstore.html">Stick Store</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <h1>Stick Store</h1>
+    <p style="text-align:center; max-width:800px; margin: 0 auto 1.5rem auto;">
+        Choose from our range of drumsticks and accessories to complete your order.
+    </p>
+
+    <!-- Two-column layout -->
+    <section class="store-section">
+
+      <!-- Left: Order Form -->
+      <div class="store-left">
+        <form action="thanks.html" method="get">
+          <fieldset>
+            <legend>Choose Your Stick Type</legend>
+            <label for="stick-select">Select Stick Type</label>
+            <select id="stick-select" name="stick-select" required>
+              <option value="">Select one</option>
+              <option value="1A">1A</option>
+              <option value="1B">1B</option>
+              <option value="2B">2B</option>
+              <option value="3A">3A</option>
+              <option value="5A">5A</option>
+              <option value="5B">5B</option>
+              <option value="7A">7A</option>
+              <option value="8D">8D</option>
+              <option value="Brushes">Brushes</option>
+              <option value="Hot Rods">Hot Rods</option>
+              <option value="Hard Mallets">Hard Mallets</option>
+              <option value="Soft Mallets">Soft Mallets</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>Quantity and Add-ons</legend>
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+
+            <label><input type="checkbox" name="bundle" value="yes"> Add Stick Bag ($15.00)</label>
+            <label><input type="checkbox" name="case" value="yes"> Add Stick Holder Attachment ($24.99)</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Customer Info</legend>
+
+            <label for="fullname">Full Name*</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Shipping Address*</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+
+            <!-- Payment Information -->
+            <fieldset style="margin-top:1rem;">
+              <legend>Payment Information</legend>
+
+              <label for="cardname">Name on Card*</label>
+              <input type="text" id="cardname" name="cardname" required>
+
+              <label for="cardnumber">Card Number*</label>
+              <input type="text" id="cardnumber" name="cardnumber" maxlength="19" placeholder="XXXX XXXX XXXX XXXX" required>
+
+              <label for="expdate">Expiration Date*</label>
+              <input type="month" id="expdate" name="expdate" required>
+
+              <label for="cvv">CVV*</label>
+              <input type="text" id="cvv" name="cvv" maxlength="4" required>
+            </fieldset>
+          </fieldset>
+
+          <button type="submit">PLACE ORDER</button>
+        </form>
+      </div>
+
+      <!-- Right: Accessories & Payment -->
+      <aside class="store-right">
+  <div class="accessories">
+    <h2>Accessories</h2>
+    <figure>
+      <img src="images/stickbag.jpg" alt="Stick bag for carrying drumsticks" loading="lazy">
+      <figcaption>Stick Bag – $15.00</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/stickholder.jpg" alt="Stick holder attachment for drum set" loading="lazy">
+      <figcaption>Stick Holder – $24.99</figcaption>
+    </figure>
+  </div>
+
+  <div class="payment-box">
+    <h2>Payment Options</h2>
+    <figure>
+      <img src="images/paymenticons.webp" alt="Accepted payment methods" loading="lazy">
+      <figcaption>We accept all major cards</figcaption>
+    </figure>
+  </div>
+</aside>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 • Talia Poulson • Web Essentials •
+      <a href="mailto:11007063@uvu.edu">Email Us</a>
+    </p>
+  </footer>
+
+  <!-- Auto-select script for stick type -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const stickType = params.get("stick");
+    if (stickType) {
+      const dropdown = document.getElementById("stick-select");
+      for (const option of dropdown.options) {
+        if (option.value.toLowerCase() === stickType.toLowerCase()) {
+          option.selected = true;
+          break;
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

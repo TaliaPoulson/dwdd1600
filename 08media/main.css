@@ -1,0 +1,62 @@
+/* ============================= */
+/* MAIN CONTENT AND PAGE STYLES  */
+/* ============================= */
+
+main {
+    padding: 1.5rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+main h1 {
+    color: #A34E2E;
+    font-size: 1.9rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+main h2 {
+    color: #564B4B;
+    margin-bottom: 0.4rem;
+    font-size: 1.3rem;
+}
+
+main p {
+    margin: 0 0 1rem 0;
+}
+
+/* Center paragraph only on contact page */
+body.contact main p {
+    text-align: center;
+}
+
+main dl dt {
+    color: #A34E2E;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+main dl dd {
+    color: #564B4B;
+    font-size: 0.95rem;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+main ul {
+    list-style-type: circle;
+    padding-left: 1.5rem;
+}
+
+main ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+main a {
+    color: #A34E2E;
+}
+
+main a:hover {
+    color: #B66B40;
+}

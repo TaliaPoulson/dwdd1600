@@ -1,0 +1,75 @@
+/* ============================= */
+/* UNIVERSAL NAVIGATION STYLES   */
+/* ============================= */
+
+nav {
+    background-color: #A34E2E;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Large screens: centered horizontal menu */
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    flex: 0 1 auto;
+}
+
+nav a {
+    display: block;
+    padding: 1rem 1.25rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: #EFE7DA;
+    font-size: 1.1rem;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+/* Hover gradient */
+nav a:hover {
+    background: linear-gradient(to top, #B66B40, #BE936A);
+    color: #EFE7DA;
+}
+
+/* Active link highlight */
+nav li.active a {
+    background-color: #B66B40;
+    color: #EFE7DA;
+}
+
+/* Small Screens: stack vertically */
+@media only screen and (max-width: 800px) {
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav li {
+        width: 100%;
+    }
+
+    nav a {
+        border-bottom: 1px solid #BE936A;
+        padding: 1rem;
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    nav a:hover {
+        background: linear-gradient(to top, #A34E2E, #BE936A);
+    }
+
+    nav li.active a {
+        background-color: #B66B40;
+    }
+}
